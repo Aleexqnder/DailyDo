@@ -15,24 +15,58 @@
             <div class="flex items-center">
                 <img src="/Images/logo.svg" alt="Logo" class="w-fit h-10">
             </div>
-            <nav class="w-fit h-full  flex gap-4 text-center">
+            <nav class="w-fit h-full flex gap-4 text-center">
                 <a href="index.php" class="text-lg hover:text-sky-400">Home</a>
                 <a href="login.php" class="text-lg hover:text-sky-400">Login</a>
                 <a href="register.php" class="text-lg hover:text-sky-400">Register</a>
-                <a href="https://github.com/Aleexqnder/TaskManager">
-                  <img src="/Images/github-dark.svg" alt="GitHub Logo" class="w-6 h-7 mb-[0.2rem]">
+                <a href="https://github.com/Aleexqnder/TaskManager" class="flex justify-center items-center " target="_blank">
+                  <img src="/Images/github-dark.svg" alt="GitHub Logo" class="w-6 h-7 pb-[0.2rem]">
                 </a>
             </nav>
         </div>
     </header>
 
 
-       <h1 class="font-extrabold text-2xl sm:text-5xl lg:text-6xl text-center mt-20 gradient-text leading-tight">
-        Organize your day, achieve your goals,<br> and maximize your productivity
-    </h1>
-      
-      
+        <h1 id="text-title" class="font-extrabold text-2xl sm:text-5xl lg:text-6xl text-center mt-20 gradient-text leading-tight">
+            
+        </h1>
+    <script>
+        const text1 = 'Organize your day'
+        const text2 = 'Achieve your goals'
+        const text3 = 'And maximize your productivity'
 
+        let title = document.getElementById('text-title');
+        let finalIndex = 0
 
+        function delay(ms){
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function changeTitleText(textToApply){
+            title.innerText = textToApply.substring(0, finalIndex); 
+            finalIndex++;
+            if (finalIndex > textToApply.length){
+                await deleteText(textToApply);
+            } else {
+                await delay(60);
+                changeTitleText(textToApply)
+            }
+        }
+
+        async function deleteText(textToApply){
+            title.innerText = textToApply.substring(0, finalIndex); 
+            finalIndex--;
+            if (finalIndex < 0){
+                return
+            } else {
+                await delay(60);
+                deleteText(textToApply)
+            }
+        }
+        
+        changeTitleText(text1);
+        changeTitleText(text2);
+        changeTitleText(text3);
+    </script>
 </body>
 </html>
