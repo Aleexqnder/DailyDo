@@ -13,8 +13,8 @@
     <header class="w-full sticky top-0 z-40 bg-gray-900 bg-opacity-60 border-b border-sky-500 border-opacity-25 text-stone-300">
         <div class="w-full h-full flex items-center justify-between p-4 josefin-sans-header">
             <div class="flex items-center">
-                <img src="/Images/logo.svg" alt="Logo" class="w-fit h-10">
-                <h1 class="text-lg sm:text-lg josefin-sans-header font-bold">TaskManager</h1>
+                <img src="/Images/logo.svg" alt="Logo" class="w-fit h-12 logo">
+                <h1 class="text-lg sm:text-lg josefin-sans-header font-extrabold">TaskManager</h1>
             </div>
             <nav class="w-fit h-full flex gap-4 text-center">
                 <a href="index.php" class="text-lg hover:text-sky-400 font-bold">Home</a>
@@ -62,7 +62,7 @@
             }
         
             async function startSequence() {
-                await delay(1500);  // Delay inicial
+                await delay(1000);  
                 await changeTitleText(text1);
                 await deleteText(text1);
         

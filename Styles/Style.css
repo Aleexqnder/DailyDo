@@ -34,3 +34,7 @@
     background-position: 0% 50%;
   }
 }
+
+.logo {
+    margin-top: -5px; /* Ajusta este valor según sea necesario */
+}
