@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="Styles/Style.css">
 </head>
 <body class="background-image">
-    <header class="w-full sticky top-0 z-40 bg-gray-900 bg-opacity-60 border-b border-sky-500 border-opacity-25 text-stone-300">
+    <header class="w-full sticky top-0 z-40 text-stone-300">
         <div class="w-full h-full flex items-center justify-between p-4 josefin-sans-header">
             <div class="flex items-center">
-                <img src="/Images/logo.svg" alt="Logo" class="w-fit h-12 logo">
-                <h1 class="text-lg sm:text-lg josefin-sans-header font-extrabold">TaskManager</h1>
+                <img src="/Images/logo.svg" alt="Logo" class="w-fit h-11 logo">
+                <h1 class="text-lg sm:text-base josefin-sans-header font-extrabold">TaskManager</h1>
             </div>
             <nav class="w-fit h-full flex gap-4 text-center">
-                <a href="index.php" class="text-lg hover:text-sky-400 font-bold">Home</a>
-                <a href="login.php" class="text-lg hover:text-sky-400 font-bold">Login</a>
-                <a href="register.php" class="text-lg hover:text-sky-400 font-bold">Register</a>
+                <a href="index.php" class="text-base hover:text-sky-400 font-bold">Home</a>
+                <a href="login.php" class="text-base hover:text-sky-400 font-bold">Login</a>
+                <a href="register.php" class="text-base hover:text-sky-400 font-bold">Register</a>
                 <a href="https://github.com/Aleexqnder/TaskManager" class="flex justify-center items-center " target="_blank">
                   <img src="/Images/github-dark.svg" alt="GitHub Logo" class="w-6 h-7 pb-[0.2rem]">
                 </a>
@@ -27,55 +27,10 @@
         </div>
     </header>
 
-        <h1 id="text-title" class="font-extrabold text-2xl sm:text-5xl lg:text-6xl text-center mt-20 gradient-text leading-tight text-base p-2">
+    <h1 id="text-title" class="font-extrabold text-2xl sm:text-5xl lg:text-6xl text-center mt-20 text-base text-white">
             
-        </h1>
-        <script>
-            const text1 = 'Organize your day';
-            const text2 = 'Achieve your goals';
-            const text3 = 'And maximize your productivity';
-        
-            let title = document.getElementById('text-title');
-            let finalIndex = 0;
-        
-            function delay(ms){
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-        
-            async function changeTitleText(textToApply){
-                finalIndex = 0;
-                while (finalIndex <= textToApply.length) {
-                    title.innerText = textToApply.substring(0, finalIndex);
-                    finalIndex++;
-                    await delay(60);
-                }
-                await delay(200); 
-            }
-        
-            async function deleteText(textToApply){
-                while (finalIndex >= 0) {
-                    title.innerText = textToApply.substring(0, finalIndex);
-                    finalIndex--;
-                    await delay(50);
-                }
-            }
-        
-            async function startSequence() {
-                await delay(1000);  
-                await changeTitleText(text1);
-                await deleteText(text1);
-        
-                await changeTitleText(text2);
-                await deleteText(text2);
-        
-                await changeTitleText(text3);
-                await deleteText(text3);
-        
-                startSequence();
-            }
-        
-            startSequence();
-        </script>
+    </h1>
+      <script src="Js/Script.js"></script> 
         
 </body>
 </html>

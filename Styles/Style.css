@@ -13,16 +13,6 @@
     height: 100vh;
 }
 
-
-.gradient-text {
-  background: linear-gradient(to right, #74a9fd, #e64f5b, #99f5bb, #1b4d9e);
-   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: gradient-move 6s ease infinite;
-}
-
 @keyframes gradient-move {
   0% {
     background-position: 0% 50%;
@@ -38,3 +28,5 @@
 .logo {
     margin-top: -5px; /* Ajusta este valor según sea necesario */
 }
+
+
