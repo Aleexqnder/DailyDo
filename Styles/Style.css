@@ -13,20 +13,16 @@
     height: 100vh;
 }
 
-@keyframes gradient-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@font-face {
+  font-family: 'VVDS Fifties Cond Light'; 
+  src: url('/fonts/VVDS-Fifties-Cond-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.logo {
-    margin-top: -5px; /* Ajusta este valor según sea necesario */
+
+.salina-font {
+  font-family: 'Salina Trial Black', sans-serif;
 }
 
 

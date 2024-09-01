@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Styles/Style.css">
+</head>
+<body class="background-image">
+    <h1>Hola</h1>
+    <form class="max-w-md mx-auto mt-8 p-4 bg-white shadow-md rounded">
+        <div class="mb-4">
+            <label for="username" class="block text-gray-700">Nombre de usuario</label>
+            <input type="text" id="username" name="username" class="w-full px-3 py-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+            <label for="password" class="block text-gray-700">Contraseña</label>
+            <input type="password" id="password" name="password" class="w-full px-3 py-2 border rounded" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-700">Registrarse</button>
+    </form>
+</body>
+</html>
