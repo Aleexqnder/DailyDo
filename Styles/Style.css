@@ -25,4 +25,22 @@
   font-family: 'Salina Trial Black', sans-serif;
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #bed7ff, #a077ff, #99f5bb, #639fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-move 6s ease infinite;
+}
 
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,6 +1,6 @@
 const text1 = 'Organize your day';
 const text2 = 'Achieve your goals';
-const text3 = 'And maximize your productivity';
+const text3 = 'Maximize your productivity.';
 
 let title = document.getElementById('text-title');
 let finalIndex = 0;
@@ -23,12 +23,12 @@ async function deleteText(textToApply) {
     while (finalIndex >= 0) {
         title.innerText = textToApply.substring(0, finalIndex);
         finalIndex--;
-        await delay(50);
+        await delay(45);
     }
 }
 
 async function startSequence() {
-    await delay(1000);
+    await delay(300);
     await changeTitleText(text1);
     await deleteText(text1);
 
