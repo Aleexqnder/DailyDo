@@ -39,3 +39,31 @@
 .inline-flex.items-center.gap-2:hover {
     transition: none; 
 }
+
+
+.Missionbutton {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Missionbutton::before {
+  margin-left: auto;
+}
+
+.Missionbutton::after, .Missionbutton::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.Missionbutton:hover::after, .Missionbutton:hover::before {
+  width: 100%;
+}
