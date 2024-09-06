@@ -42,12 +42,12 @@
 
 .btn-shine {
   color: #fff;
-  background: linear-gradient(to right, #34a0f8, #fff, #95cbf7);
+  background: linear-gradient(to right, #34a0f8, #fff, #34a0f8);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 8s infinite linear;
+  animation: shine 10s linear infinite;
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
@@ -61,9 +61,54 @@
   0% {
     background-position: 200% center;
   }
+  50% {
+    background-position: 0% center;
+  }
   100% {
-    background-position: -200% center;
+    background-position: 200% center;
   }
 }
 
+.cards {
+  perspective: 500px;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #211831 0%, #111113 100%);
+  border: 2px solid #555555;
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
+}
+
+.card:hover {
+  transform: translateZ(5px) rotateX(5deg) rotateY(10deg);
+}
+
+
+
+
+.cards1 {
+  perspective: 500px;
+}
+
+.card1 {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #211831 0%, #111113 100%);
+  border: 2px solid #555555;
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
+}
+
+.card1:hover {
+  transform: translateZ(-5px) rotateX(-5deg) rotateY(-10deg);
+}
 
