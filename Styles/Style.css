@@ -119,5 +119,52 @@
   transform: translateZ(-5px) rotateX(-5deg) rotateY(-10deg);
 }
 
+.wrapped {
+  border: 1px solid #fcfcfc;
+  width: 60%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 130px;
+  margin-top: 8rem; 
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,    /* Transparente en el extremo izquierdo */
+    rgba(0, 0, 0, 1) 20%,   /* Opaco desde 20% del contenedor */
+    rgba(0, 0, 0, 1) 80%,   /* Opaco hasta el 80% del contenedor */
+    rgba(0, 0, 0, 0) 100%   /* Transparente en el extremo derecho */
+  );
+}
 
 
+@keyframes scrollLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -200px; /* Ajusta esto según el ancho de tus elementos */
+  }
+}
+
+.item {
+  margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+  padding: 0; /* Asegúrate de que no haya rellenos adicionales */
+  width: 200px;
+  height: 130px;
+  background-color: red;
+  border-radius: 6px;
+  position: absolute;
+  animation-name: scrollLeft;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(5s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
+}
+
+.item2 {
+  animation-delay: calc(5s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
+}
