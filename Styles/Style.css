@@ -120,7 +120,6 @@
 }
 
 .wrapped {
-  border: 1px solid #fcfcfc;
   width: 60%;
   max-width: 1536px;
   margin-inline: auto;
@@ -156,15 +155,65 @@
   border-radius: 6px;
   position: absolute;
   animation-name: scrollLeft;
-  animation-duration: 5s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 .item1 {
-  animation-delay: calc(5s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(7s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
 }
 
 .item2 {
-  animation-delay: calc(5s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(7s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
 }
+
+/* From Uiverse.io by cssbuttons-io */ 
+.buttonAnimation {
+  --color: #37c566;
+  width: 9em;
+  height: 2.6em;
+  text-align: center;
+  line-height: 2.5em;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.buttonAnimation:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.buttonAnimation:hover {
+  color: #ffffff;
+}
+
+.buttonAnimation:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.buttonAnimation:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.buttonAnimation:active:before {
+  background: #37c566;
+  transition: background 0s;
+}
+
