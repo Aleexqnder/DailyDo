@@ -147,26 +147,48 @@
 }
 
 .item {
-  margin: 0; /* Asegúrate de que no haya márgenes adicionales */
-  padding: 0; /* Asegúrate de que no haya rellenos adicionales */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 200px;
   height: 130px;
-  background-color: red;
   border-radius: 6px;
+  padding: 0 20px;
   position: absolute;
   animation-name: scrollLeft;
-  animation-duration: 7s;
+  animation-duration: 11s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  font-size: 1.1rem;
+  color: white;
+  text-align: left;
 }
 
+.icon {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 .item1 {
-  animation-delay: calc(7s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(11s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
 }
 
 .item2 {
-  animation-delay: calc(7s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(11s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
 }
+
+.item i {
+  margin-right: 20px;
+  font-size: 1.3rem;
+}
+
 
 /* From Uiverse.io by cssbuttons-io */ 
 .buttonAnimation {
@@ -216,4 +238,5 @@
   background: #37c566;
   transition: background 0s;
 }
+
 
