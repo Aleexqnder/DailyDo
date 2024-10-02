@@ -5,23 +5,51 @@
     font-style: normal;
   }
   
-   body {
-      background-color: #030514;
-      position: relative;
+    body {
+    background-color: #030514;
+    position: relative;
   }
   
   body::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 350px;
-      height: 530px; 
-      background: radial-gradient(circle, rgba(78, 9, 124, 0.705), rgba(3, 5, 20, 0));
-      transform: translate(-40%, -80%) rotate(45deg);
-      filter: blur(50px); 
-      z-index: -1; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.3; 
+    z-index: -2; 
   }
+  
+  body::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 350px;
+    height: 530px; 
+    background: radial-gradient(circle, rgba(78, 9, 124, 0.521), rgba(3, 5, 20, 0));
+    transform: translate(-40%, -80%) rotate(45deg);
+    filter: blur(50px); 
+    z-index: -1; 
+  }
+
+  .custom-background {
+    margin-top: 100px;
+    background: #00121baf;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    position: relative; 
+    width: 100%;
+    height: 900px;
+    z-index: 0; 
+  }
+
+
+
 
 @font-face {
   font-family: 'VVDS Fifties Cond Light'; 
