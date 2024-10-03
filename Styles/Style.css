@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
+.TextArt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:120px;
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						8px 8px #ff1f8f,
+						20px 20px #000000;
+}
+
+
 .josefin-sans-header {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -39,8 +57,8 @@
 
   .custom-background {
     margin-top: 100px;
-    background: #00121baf;
-    border: 1px solid #222222;
+    background: #0f172a8f;
+    border: 1px solid #363636;
     border-radius: 4px;
     position: relative; 
     width: 100%;
@@ -109,16 +127,18 @@
 
 
 .card {
-  background: #030514;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 8px;
+  background: #1e293b71;
+  margin-top: 50px;
+  margin-left: 100px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  width: 300px;
+  width: 250px;
   height: 350px;
 }
+
+
 
 .card-image {
   width: 100px;
@@ -126,7 +146,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .card-content {
@@ -134,21 +154,27 @@
 }
 
 .card-name {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800; 
+  font-size: 1.2em;
+  color: #d8d8d8;
+  margin-bottom: 1px;
+  letter-spacing: -0.5px;
 }
 
 .card-title {
-  font-size: 1.2em;
-  color: #fff;
-  margin-bottom: 15px;
+  font-size: 0.9em;
+  font-family: 'Salina Trial Black', sans-serif;
+  color: #dbdbdb;
+  margin-bottom: 35px;
+ 
 }
 
 .card-opinion {
-  font-size: 1em;
+  font-family: 'Salina Trial Black', sans-serif;
+  font-size: 0.9em;
   color: #fff;
+  text-align: center;
 }
 
 .wrapped {
@@ -188,7 +214,7 @@
   padding: 0 20px;
   position: absolute;
   animation-name: scrollLeft;
-  animation-duration: 11s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   font-size: 1.1rem;
@@ -209,11 +235,11 @@
 
 
 .item1 {
-  animation-delay: calc(11s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(6s / 3 * 2 * -1); /* Ajusta el delay según la duración de la animación */
 }
 
 .item2 {
-  animation-delay: calc(11s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
+  animation-delay: calc(6s / 3 * 1 * -1); /* Ajusta el delay según la duración de la animación */
 }
 
 .item i {
@@ -269,6 +295,13 @@
 .buttonAnimation:active:before {
   background: #37c566;
   transition: background 0s;
+}
+
+
+.textColumn{
+  margin-left: 150px;
+  margin-top: 80px;
+  text-align: center;
 }
 
 
